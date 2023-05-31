@@ -1,0 +1,28 @@
+<!-- HTML rendered in the browser -->
+<h1>Enter your Details please</h1>
+<form action="{% url 'submit' %}" method="POST">
+    {% csrf_token %}
+<p>
+    <label for="emp_name">Name of Applicant:</label>
+    <input type="text" name="emp_name" maxlength="50" required id="emp_name">
+</p>
+
+<p>
+    <label for="emp_reg_no">Registration Number:</label>
+    <input type="number" name="emp_reg_no" maxlength="100" required id="emp_reg_no">
+</p>
+
+<p>
+    <label for="shift_choice">Field:</label>
+    <select name="shift_choice" id="shift_choice">
+        <option value="Morning">Morning</option>
+        <option value="Night">Night</option>
+    </select>
+</p>
+
+<p>
+    <label for="password">Password</label>
+    <input type="password" name="password" maxlength="100" required id="password">
+</p>
+<input type="submit" value="Submit">
+</form>

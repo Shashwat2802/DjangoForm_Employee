@@ -1,0 +1,19 @@
+
+<h1>Change your password</h1>
+<form action="{% url 'passcheck' %}" method="POST">
+    {% csrf_token %}
+    <p>
+        <label for="emp_reg_no">Please Enter your registration number:</label>
+        <input type="number" name="emp_reg_no" maxlength="100" required id="emp_reg_no">
+        <input type="submit" value="Enter">
+    <p>
+        <label for="password_one">Please enter your password</label>
+        <input type="password" name="password_one" maxlength="100" required id="password_one">
+    </p>
+    <p>
+        <label for="password_two">Please enter your password again</label>
+        <input type="password" name="password_two" maxlength="100" required id="password_two">
+    </p>
+    <input type="submit" value="Submit">
+</form>
+

@@ -1,0 +1,19 @@
+
+<h1>Please enter your login credentials!</h1>
+<form action="{% url 'success' %}" method="POST">
+    {% csrf_token %}
+    <p>
+        <label for="emp_name">Name of Applicant:</label>
+        <input type="text" name="emp_name" maxlength="50" required id="emp_name">
+    </p>
+    <p>
+        <label for="emp_reg_no">Regisration Number</label>
+        <input type="number" name="emp_reg_no" maxlength="100" required id="emp_reg_no">
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input type="password" name="password" maxlength="100" required id="password">
+    </p>
+    <input type="submit" value="Submit">
+</form>
+
